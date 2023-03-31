@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Teko", sans-serif;
+}
+
+.top-pane {
+  background-color: hsl(225, 6%, 25%);
+}
+
+.pane {
+  height: 100%;
+  display: flex;
+}
+
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-height: 13rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: hsl(225, 6%, 25%);
+  /* border: 2px solid red; */
+}
+
+.editor-container.collapsed {
+  flex-grow: 0;
+  /* height: 0.5rem; */
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.expand-collapse-btn {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225, 6%, 13%);
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.CodeMirror {
+  height: 100% !important;
+  /* max-height: 10rem; */
+}
+
+.CodeMirror ::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+/* Track */
+.CodeMirror ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.CodeMirror ::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  overflow-y: hidden;
+}
+
+.outterWrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding-top: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.left_Pane {
+  width: 30%;
+  flex-direction: column;
+}
+
+.Right_Pane {
+  width: 70%;
+}
+
+.topNav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsl(225, 6%, 25%);
+  padding: 0rem 1.5rem;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoName {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.icon {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 900;
+}
+
+.icon2 {
+  font-size: 1rem;
+  color: white;
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
